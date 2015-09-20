@@ -21,8 +21,14 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 Description of the dataset
 =========================================
-    The experiment from which this was created have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, several measures through sensor signals were recorded and pre-processed. The measure that was retained for this project is the magnitude of body acceleration three-dimensional signals within a certain time domain.   
-  
+    The experiment from which this was created have been carried out with a group of 30 
+    volunteers within an age bracket of 19-48 years. Each person performed six activities 
+    (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a 
+    smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and 
+    gyroscope, several measures through sensor signals were recorded and pre-processed. 
+    The measure that was retained for this project is the magnitude of body acceleration 
+    three-dimensional signals within a certain time domain.
+
   
 The dataset includes the following files:
 =========================================
@@ -36,13 +42,16 @@ R script
 =========================================
     Name: run_analysis.R
     Location: GitHub and at the bottom of the README.md file
-    Function: put and generates a tidy data text file (wide form) that meets the principles of tidy data learn in the "Getting and cleaning data" course on Coursera
+    Function: put and generates a tidy data text file (wide form) that meets the 
+        principles of tidy data learn in the "Getting and cleaning data" course on Coursera
     Details:
         1. Merges the training and the test sets to create one data set.
-        2. Extracts the measurement of the mean and the standard deviation for the Time Body Accelerometer Magnitude (tBodyAccMag) variable. 
+        2. Extracts the measurement of the mean and the standard deviation for the Time Body 
+            Accelerometer Magnitude (tBodyAccMag) variable. 
         3. Incorporates descriptive activity names to the data set.
         4. Labels the data set with descriptive variable names. 
-        5. From the data set in step 4, creates an independent tidy data set called "tidydataset.txt" with the average of tBodyAccMag for each activity and each subject.
+        5. From the data set in step 4, creates an independent tidy data set called 
+            "tidydataset.txt" with the average of tBodyAccMag for each activity and each subject.
     
 To read the tidy data set (2 methods)
 =========================================
