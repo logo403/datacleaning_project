@@ -38,7 +38,7 @@ The dataset includes the following files:
     - "tidydataset.txt" : File with 30 rows (subjects) and 6 variables (activity)
     - 
   
-R script
+R script details
 =========================================
     Name: run_analysis.R
     Location: GitHub and at the bottom of the README.md file
