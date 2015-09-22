@@ -2,6 +2,7 @@ setwd("C:/Users/logo403/Documents/R/work/datacleaning/")
 
 #Call the function dplyr for variable selection and other features
 library(dplyr)
+library(tidyr)
 
 ###################################################################
 # 1. Merges the training and the test sets to create one data set #
@@ -40,6 +41,7 @@ reducedFeature <- cbind(rbind(trainActivity, testActivity),reducedFeature)
 # read file with activity description and join the tables and remove activity id
 activityDescription <- read.table("./UCI HAR Dataset/activity_labels.txt",
                        col.names = c("activityid", "activity"))
+activityDescription$activity <- tolower(activityDescription$activity)
 reducedFeature <- left_join(reducedFeature, activityDescription, 
                             by = "activityid") %>% select(-activityid)
 
@@ -65,7 +67,6 @@ secondData <- cbind(rbind(trainSubject, testSubject),reducedFeature)
 meanFeature <- secondData %>% select(-tBodyAccMag_std) %>%
         group_by(activity,subjectid) %>% summarize_each(funs(mean))
 
-library(tidyr)
 meanFeature <- spread(meanFeature,activity,tBodyAccMag_mean)
 
 #########################################
